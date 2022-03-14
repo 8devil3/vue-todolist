@@ -2,7 +2,7 @@ const app = new Vue({
     el: '#root',
     data: {
         newItem: '',
-        isEmpty: false,
+        isEmpty: null,
         arrTodo: [
             {
                 title: 'Fare la spesa',
@@ -44,6 +44,7 @@ const app = new Vue({
             if (newTd.trim() != '') {
                 this.arrTodo.unshift({title: newTd.trim(), done: false}); // aggiungo l'elemento all'inizio della lista (con "unshift()")
                 this.newItem = '';
+                this.isEmpty = false;
                 console.table(this.arrTodo);
             } else {
                 console.table(this.arrTodo);
