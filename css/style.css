@@ -36,17 +36,16 @@ li {
     justify-content: space-between;
     border-bottom: 1px #666 solid;
     padding: 0 0.5rem;
+}
 
+li:last-child{
+    border-bottom: 0;
 }
 
 li p {
     padding: 1rem 0;
     flex-grow: 1;
     cursor: pointer;
-}
-
-li:last-child{
-    border-bottom: 0;
 }
 
 .btn-add {
@@ -125,13 +124,6 @@ li:last-child{
     border-width: 16px 5px 0 5px;
     border-color: #ff5858 transparent transparent transparent;
     margin-left: 1.2rem;
-}
-
-.input-field {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 1rem;
 }
 
 input {
