@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 
     <title>Todo list</title>
@@ -14,19 +15,19 @@
 <body>
 
     <div id="root">
-        <div id="interaction">
-            <input type="text" id="add-todo" placeholder="Nuovo todo" v-model="newItem">
+        <div class="interaction">
+            <input type="text" id="add-todo" placeholder="New todo" v-model="newItem">
 
             <div v-if="isEmpty">Add a to do item</div>
 
-            <button @click="addNew(newItem)" >aggiungi</button>
+            <button @click="addNew(newItem)" class="btn-add"><i class="fa-solid fa-plus"></i> add</button>
         </div>
 
         <ul>
             <li v-for="(td, index) in arrTodo">
-                <button class="name-todo" @click="setDone(index)" :class="arrTodo[index].done ? 'done' : ''">{{ td.title }}</button>
+                <p class="name-todo" @click="setDone(index)" :class="arrTodo[index].done ? 'done' : ''">{{ td.title }}</p>
 
-                <button class="delete-todo" @click="setDelete(index)">X</button>
+                <button class="delete" @click="setDelete(index)"><i class="fa-solid fa-xmark"></i></button>
             </li>
         </ul>
     </div>

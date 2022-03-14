@@ -10,40 +10,53 @@ body {
     font-size: 16px;
     background-color: #2a2a2a;
     color: #fff;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
 }
 
-#container {
-    margin: auto;
-    display: flex;
-    width: 700px;
-    height: 300px;
-    box-shadow: 0 0 8px 8px #1f1f1f;
+#root {
+    margin: 6rem auto;
+    max-width: 600px;
 }
 
-.btn {
-    position: absolute;
-    right: 50%;
-    transform: translate(50%, 0);
-    border-radius: 50%;
-    height: 1.6rem;
-    width: 1.6rem;
+.interaction {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-bottom: 1px #666 solid;
+}
+
+li:last-child{
+    border-bottom: 0;
+}
+
+.btn-add {
+    display: block;
     border: 0;
     background-color: #f60;
+    border-radius: 100px;
+    padding: 0.5rem 0.8rem;
     color: white;
-    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-.btn-up {
-    top: 0.5rem;
-
+.btn-add:hover {
+    background-color: #f80;
 }
 
-.btn-down {
-    bottom: 0.5rem;
+.delete {
+    background-color: transparent;
+    color: #e65b5b;
+    font-size: 1.5rem;
+    display: block;
+    border: 0;
 }
 
 .done {
@@ -51,26 +64,7 @@ body {
 }
 
 .warning {
-    display: none;
-}
-
-.visible {
-    display: block;
-}
-
-
-
-/* .img-size {
-    display: flex;
-    align-items: center;
-    margin: 1rem 0;
-}
-
-img {
-    display: block;
-    margin: 1.5rem 0;
-    box-shadow: 0 0 4px 4px #1f1f1f;
-    border-radius: 1rem;
+    color: #d8b62f;
 }
 
 .input-field {
@@ -82,52 +76,8 @@ img {
 
 input {
     padding: 0.5rem 1rem;
-    width: 120px;
+    width: 60%;
     border-radius: 100px;
     border: 0;
-} */
-
-/* label {
-    margin-bottom: 0.5rem;
 }
 
-button {
-    display: block;
-    border: 0;
-    background-color: #f60;
-    border-radius: 100px;
-    padding: 0.5rem 0.8rem;
-    color: white;
-    text-transform: uppercase;
-    margin: 0 0.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-button:hover {
-    background-color: #f80;
-} */
-
-
-
-
-.cat {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-}
-
-.cat-m {
-    background-color: cornflowerblue;
-}
-
-.cat-f {
-    background-color: pink;
-    color: #2a2a2a;
-}
