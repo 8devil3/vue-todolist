@@ -16,7 +16,7 @@
 
     <div id="root">
         <div class="interaction">
-            <input type="text" id="add-todo" placeholder="New todo" v-model="newItem">
+            <input type="text" id="add-todo" placeholder="New todo" v-model="newItem" @keyup.enter="addNew(newItem)">
 
             <div class="tooltip" v-show="isEmpty">
                 <div class="warning">Add a to do item!</div>
