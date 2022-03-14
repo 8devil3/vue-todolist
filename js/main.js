@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#root',
     data: {
-        newItem: '',
+        newItem: null,
         isEmpty: null,
         arrTodo: [
             {
@@ -36,14 +36,14 @@ const app = new Vue({
                 console.table(this.arrTodo);
             }
         },
-        setDelete(index) { //eleimino l'elemento
+        setDelete(index) { //elimino l'elemento
             this.arrTodo.splice(index ,1);
             console.table(this.arrTodo);
         },
         addNew(newTd) { //aggiungo l'elemento, controllando che l'input non sia vuoto, controllando anche gli spazi vuoti
             if (newTd.trim() != '') {
                 this.arrTodo.unshift({title: newTd.trim(), done: false}); // aggiungo l'elemento all'inizio della lista (con "unshift()")
-                this.newItem = '';
+                this.newItem = null;
                 this.isEmpty = false;
                 console.table(this.arrTodo);
             } else {
