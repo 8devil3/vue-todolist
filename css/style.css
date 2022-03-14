@@ -63,6 +63,14 @@ li:last-child{
     transition: background-color 0.2s;
 }
 
+.btn-add::before {
+    content: '\2b';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 0.8rem;
+    margin-right: 0.4rem
+}
+
 .btn-add:hover {
     background-color: #f80;
 }
@@ -75,6 +83,14 @@ li:last-child{
     border: 0;
     cursor: pointer;
     transition: color 0.2s;
+}
+
+.btn-delete::before {
+    content: '\f00d';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-right: 0.4rem
 }
 
 .btn-delete:hover {

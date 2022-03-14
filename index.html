@@ -24,13 +24,13 @@
                 <div class="tooltip-pointer"></div>
             </div>
 
-            <button @click="addNew(newItem)" class="btn-add"><i class="fa-solid fa-plus"></i> add</button>
+            <button @click="addNew(newItem)" class="btn-add">add</button>
         </div>
 
         <ul>
             <li v-for="(td, index) in arrTodo">
                 <p @click="setDone(index)" :class="arrTodo[index].done ? 'done' : ''">{{ td.title }}</p>
-                <button class="btn-delete" @click="setDelete(index)"><i class="fa-solid fa-xmark"></i></button>
+                <button class="btn-delete" @click="setDelete(index)"></button>
             </li>
         </ul>
         <p class="empty" v-if="arrTodo.length == 0">Empty todo list</p>
