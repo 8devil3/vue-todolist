@@ -47,8 +47,8 @@ const app = new Vue({
                 this.isEmpty = false;
                 console.table(this.arrTodo);
             } else {
-                console.table(this.arrTodo);
                 this.isEmpty = true;
+                console.table(this.arrTodo);
             }
         }
     }
