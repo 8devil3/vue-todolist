@@ -15,6 +15,7 @@ body {
 #root {
     margin: 6rem auto;
     max-width: 600px;
+    padding: 1rem;
 }
 
 .interaction {
@@ -51,16 +52,23 @@ li:last-child{
     background-color: #f80;
 }
 
-.delete {
+.btn-delete {
     background-color: transparent;
-    color: #e65b5b;
+    color: #f18585;
     font-size: 1.5rem;
     display: block;
     border: 0;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-delete:hover {
+    color: #ff2929;
 }
 
 .done {
     text-decoration: line-through;
+    color: #999;
 }
 
 .warning {
