@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Todo list</title>
+</head>
+
+<body>
+
+    <div id="root">
+        <div id="interaction">
+            <input type="text" id="add-todo" placeholder="Nuovo todo" v-model="newItem">
+
+            <div v-if="isEmpty">Add a to do item</div>
+
+            <button @click="addNew(newItem)" >aggiungi</button>
+        </div>
+
+        <ul>
+            <li v-for="(td, index) in arrTodo">
+                <button class="name-todo" @click="setDone(index)" :class="arrTodo[index].done ? 'done' : ''">{{ td.title }}</button>
+
+                <button class="delete-todo" @click="setDelete(index)">X</button>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
