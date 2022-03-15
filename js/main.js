@@ -41,8 +41,8 @@ const app = new Vue({
             console.table(this.arrTodo);
         },
         addNew(newTd) { //aggiungo l'elemento, controllando che l'input non sia vuoto, controllando anche gli spazi vuoti
-            if (newTd.trim() != '') {
-                this.arrTodo.unshift({title: newTd.trim(), done: false}); // aggiungo l'elemento all'inizio della lista (con "unshift()")
+            if (newTd != '') {
+                this.arrTodo.unshift({title: newTd, done: false}); // aggiungo l'elemento all'inizio della lista (con "unshift()")
                 this.newItem = '';
                 this.isEmpty = false;
                 console.table(this.arrTodo);

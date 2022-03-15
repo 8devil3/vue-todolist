@@ -17,7 +17,7 @@
     <div id="root">
         <h1>Todo list</h1>
         <div class="interaction">
-            <input type="text" id="add-todo" placeholder="New todo" v-model="newItem" @keyup.enter="addNew(newItem)">
+            <input type="text" id="add-todo" placeholder="New todo" v-model.trim="newItem" @keyup.enter="addNew(newItem)">
 
             <div class="tooltip" v-show="isEmpty">
                 <div class="warning">Empty items are not valid</div>
