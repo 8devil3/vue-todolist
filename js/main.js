@@ -28,13 +28,8 @@ const app = new Vue({
     },
     methods: {
         setDone(index) { //imposto l'elemento su "done"
-            if (!this.arrTodo[index].done) {
-                this.arrTodo[index].done = true;
-                console.table(this.arrTodo);
-            } else {
-                this.arrTodo[index].done = false;
-                console.table(this.arrTodo);
-            }
+            this.arrTodo[index].done = !this.arrTodo[index].done
+            console.table(this.arrTodo);
         },
         setDelete(index) { //elimino l'elemento
             this.arrTodo.splice(index ,1);
